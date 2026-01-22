@@ -19,6 +19,12 @@
         android:theme="@style/Theme.Dtta"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Social"
+            android:exported="false" />
+        <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity

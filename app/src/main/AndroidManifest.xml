@@ -19,22 +19,11 @@
         android:theme="@style/Theme.Dtta"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Settings"
+            android:name=".PrivacyControls"
             android:exported="false" />
+        <!-- LAUNCHER ACTIVITY -->
         <activity
-            android:name=".ActivityDetail"
-            android:exported="false" />
-        <activity
-            android:name=".TrainingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MapsActivity"
+            android:name=".Activities"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +31,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Setting"
+            android:exported="false" />
     </application>
 
 </manifest>

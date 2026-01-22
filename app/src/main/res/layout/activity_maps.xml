@@ -12,7 +12,15 @@
     <org.osmdroid.views.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#777777" />
+    </org.osmdroid.views.MapView>
 
     <LinearLayout
         android:id="@+id/spinnerOverlay"
@@ -147,13 +155,6 @@
         app:behavior_hideable="false"
         app:behavior_peekHeight="230dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-        <View
-            android:layout_width="48dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
-            android:background="#777777" />
 
         <TextView
             android:layout_width="wrap_content"

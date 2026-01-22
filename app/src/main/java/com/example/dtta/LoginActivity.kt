@@ -53,11 +53,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun loginGoogle(view: View) {
+    fun loginGoogle(View: View) {
         googleLauncher.launch(googleSignInClient.signInIntent)
     }
 
-    fun btnLgn(view: View) {
+    fun btnLgn(View: View) {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }

@@ -1,5 +1,6 @@
 package com.example.dtta
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
@@ -10,6 +11,7 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 import android.os.Handler
+import android.widget.Button
 
 class MapsActivity : AppCompatActivity() {
 
@@ -22,9 +24,24 @@ class MapsActivity : AppCompatActivity() {
         Configuration.getInstance().userAgentValue = "dtta-app/1.0"
         Configuration.getInstance().load(ctx, ctx.getSharedPreferences("osmdroid", MODE_PRIVATE))
 
-
-
         setContentView(R.layout.activity_maps)
+
+        val btnStart = findViewById<Button>(R.id.btnStart)
+        val btnTraining = findViewById<Button>(R.id.btnTraining)
+
+        btnStart.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        btnTraining.setOnClickListener {
+            startActivity(Intent(this, TrainingActivity::class.java))
+        }
+
+        val btnDetail = findViewById<Button>(R.id.btnDetailActivity)
+        btnDetail.setOnClickListener {
+            startActivity(Intent(this, ActivityDetail::class.java))
+        }
+
 
         val spinnerOverlay = findViewById<LinearLayout>(R.id.spinnerOverlay)
 
@@ -46,6 +63,15 @@ class MapsActivity : AppCompatActivity() {
         marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         marker.title = "Kanayakan, Polman Bandung"
         map.overlays.add(marker)
+
+        val etSearch = findViewById<android.widget.EditText>(R.id.etSearch)
+        val tvActivity = findViewById<android.widget.TextView>(R.id.tvActivity)
+
+        tvActivity.setOnClickListener {
+            val intent = android.content.Intent(this, ResultActivity::class.java)
+            intent.putExtra("keyword", etSearch.text.toString())
+            startActivity(intent)
+        }
     }
 
 

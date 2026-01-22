@@ -44,5 +44,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
 
 }

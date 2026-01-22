@@ -1,6 +1,7 @@
 package com.example.dtta
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -43,4 +44,7 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         map.onPause()
     }
+
+    fun btnSign(view: View) {}
+    fun tvLogin(view: View) {}
 }

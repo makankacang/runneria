@@ -19,10 +19,21 @@
         android:theme="@style/Theme.Dtta"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
             android:name=".PrivacyControls"
             android:exported="false" />
         <!-- LAUNCHER ACTIVITY -->
         <activity
+            android:name=".MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:name=".Activities"
             android:exported="true">
             <intent-filter>

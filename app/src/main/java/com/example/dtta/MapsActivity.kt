@@ -72,6 +72,23 @@ class MapsActivity : AppCompatActivity() {
             intent.putExtra("keyword", etSearch.text.toString())
             startActivity(intent)
         }
+
+        findViewById<View>(R.id.btnHome).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnMaps).setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+        }
+
+
+        findViewById<View>(R.id.btnProgress).setOnClickListener {
+            startActivity(Intent(this, ProgressActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnProfile).setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
     }
 
 

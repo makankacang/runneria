@@ -3,30 +3,21 @@ package com.example.dtta
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.net.toUri
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var icProfile: View
-    private lateinit var btnChallenge: View
-    private lateinit var btnStrava: CardView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        icProfile = findViewById(R.id.icProfile)
-        btnChallenge = findViewById(R.id.btnChallenge)
-        btnStrava = findViewById(R.id.btnStrava)
-
-        icProfile.setOnClickListener {
+        findViewById<View>(R.id.icProfile).setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
 
-        btnChallenge.setOnClickListener {
+        findViewById<View>(R.id.btnChallenge).setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -35,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
             )
         }
 
-        btnStrava.setOnClickListener {
+        findViewById<CardView>(R.id.btnStrava).setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -43,5 +34,23 @@ class HomeActivity : AppCompatActivity() {
                 )
             )
         }
+
+        findViewById<View>(R.id.btnHome).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnMaps).setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+        }
+
+
+        findViewById<View>(R.id.btnProgress).setOnClickListener {
+            startActivity(Intent(this, ProgressActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnProfile).setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
     }
 }
+

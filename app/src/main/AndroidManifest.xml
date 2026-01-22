@@ -18,49 +18,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dtta"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".ProgressActivity"
             android:exported="false" />
-
         <activity
             android:name=".Social"
             android:exported="false" />
-
         <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
-
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
-
         <activity
             android:name=".PrivacyControls"
             android:exported="false" />
-
         <activity
             android:name=".MapsActivity"
             android:exported="false" />
-
         <activity
             android:name=".Setting"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-
 
 </manifest>

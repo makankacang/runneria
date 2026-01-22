@@ -1,5 +1,6 @@
 package com.example.dtta
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,8 +29,29 @@ class ProgressActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = if (position == 0) "Progress" else "Activities"
         }.attach()
+
+        findViewById<View>(R.id.btnHome).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnMaps).setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+        }
+
+
+        findViewById<View>(R.id.btnProgress).setOnClickListener {
+            startActivity(Intent(this, ProgressActivity::class.java))
+        }
+
+        findViewById<View>(R.id.btnProfile).setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
     }
 
+    fun goToSettings(view: View) {
+        val intent = Intent(this, Setting::class.java)
+        startActivity(intent)
+    }
     inner class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 2
         override fun createFragment(position: Int): Fragment {

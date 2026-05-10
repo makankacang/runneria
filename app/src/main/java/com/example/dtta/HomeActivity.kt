@@ -60,10 +60,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_activity -> {
-                    startActivity(
-                        Intent(this, ProgressActivity::class.java)
-                            .putExtra(ProgressActivity.EXTRA_INITIAL_TAB, ProgressActivity.TAB_ACTIVITIES)
-                    )
+                    startActivity(Intent(this, Activities::class.java))
                     true
                 }
                 R.id.navigation_progress -> {

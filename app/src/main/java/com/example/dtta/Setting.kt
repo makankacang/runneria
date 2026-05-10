@@ -22,8 +22,7 @@ class Setting : AppCompatActivity() {
     }
 
     fun goToActivities(view: View) {
-        val intent = Intent(this, ProgressActivity::class.java)
-        intent.putExtra(ProgressActivity.EXTRA_INITIAL_TAB, ProgressActivity.TAB_ACTIVITIES)
+        val intent = Intent(this, Activities::class.java)
         startActivity(intent)
         // opsional
     }

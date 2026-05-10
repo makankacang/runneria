@@ -102,7 +102,7 @@
             <TextView
                 android:id="@+id/tvActivitiesTab"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Activities"
@@ -111,7 +111,7 @@
             <View
                 android:id="@+id/indicatorActivities"
                 android:layout_width="50dp"
-                android:layout_height="3dp"
+                android:layout_height="1dp"
                 android:background="@android:color/transparent" />
         </LinearLayout>
     </LinearLayout>
@@ -258,52 +258,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/activitiesContent"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#F2F2F2"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="10dp">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                app:cardBackgroundColor="#D1D1D1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="12dp">
-
-                    <SearchView
-                        android:id="@+id/searchActivities"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:iconifiedByDefault="false"
-                        android:queryHint="Search and filter your activities" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvActivities"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingBottom="20dp"
-            tools:listitem="@layout/item_activity" />
-    </LinearLayout>
 </LinearLayout>

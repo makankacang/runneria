@@ -42,6 +42,7 @@ dependencies {
     implementation("org.osmdroid:osmdroid-android:6.1.16")
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

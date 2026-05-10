@@ -48,7 +48,6 @@
             android:paddingRight="24dp"
             android:text="Continue with Google"
             android:textColorLink="#ED7676"
-            app:icon="@drawable/google"
             app:iconTint="#FFFFFF"
             app:strokeColor="#F44336" />
 
@@ -59,7 +58,6 @@
             android:backgroundTint="#A80038"
             android:paddingLeft="15dp"
             android:text="Continue with Apple"
-            app:icon="@drawable/apple_inc__logo_wine"
             app:iconPadding="-7dp"
             app:iconSize="34dp" />
 

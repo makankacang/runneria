@@ -21,10 +21,6 @@ class Activities : AppCompatActivity() {
             startActivity(Intent(this, MapsActivity::class.java))
         }
 
-        findViewById<View>(R.id.btnActivities).setOnClickListener {
-            startActivity(Intent(this, TrainingActivity::class.java))
-        }
-
         findViewById<View>(R.id.btnProgress).setOnClickListener {
             startActivity(Intent(this, ProgressActivity::class.java))
         }

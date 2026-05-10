@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Dtta"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Changeemail"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
@@ -47,6 +50,9 @@
             android:exported="false" />
         <activity
             android:name=".Setting"
+            android:exported="false" />
+        <activity
+            android:name=".Activities"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

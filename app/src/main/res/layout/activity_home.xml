@@ -32,14 +32,7 @@
             android:layout_centerVertical="true">
 
             <ImageView
-                android:id="@+id/icProfile"
-                android:layout_width="32dp"
-                android:layout_height="28dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:srcCompat="@drawable/orang" />
-
-            <ImageView
+                android:id="@+id/btnSearchSocial"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginEnd="9dp"
@@ -129,12 +122,21 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/btnSeeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
                     android:textColor="#A80038"
                     android:textStyle="bold" />
             </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:tabIndicatorColor="#A80038"
+                app:tabSelectedTextColor="#A80038"/>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"

@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun btnLgn(View: View) {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
 }

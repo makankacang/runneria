@@ -13,8 +13,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        findViewById<View>(R.id.icProfile).setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
+        findViewById<View>(R.id.btnSearchSocial).setOnClickListener {
+            startActivity(Intent(this, Social::class.java))
         }
 
         findViewById<View>(R.id.btnChallenge).setOnClickListener {
@@ -43,7 +43,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, MapsActivity::class.java))
         }
 
-
         findViewById<View>(R.id.btnProgress).setOnClickListener {
             startActivity(Intent(this, ProgressActivity::class.java))
         }
@@ -53,4 +52,3 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 }
-

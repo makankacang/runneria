@@ -8,20 +8,19 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
 class ProfileActivity : AppCompatActivity() {
+
+    private lateinit var tvNama: TextView
+    private lateinit var tvLokasi: TextView
+    private lateinit var tvBio: TextView
+
     private val editProfileLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()
-        ) { result ->
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
-                val data = result.data
-
-                val nama = data?.getStringExtra("EXTRA_NAMA")
-                val lokasi = data?.getStringExtra("EXTRA_LOKASI")
-                val bio = data?.getStringExtra("EXTRA_BIO")
-
-                findViewById<TextView>(R.id.tvNama).text = nama
-                findViewById<TextView>(R.id.tvLokasi).text = lokasi
-                findViewById<TextView>(R.id.tvBio).text = bio
+                result.data?.let {
+                    tvNama.text = it.getStringExtra("EXTRA_NAMA")
+                    tvLokasi.text = it.getStringExtra("EXTRA_LOKASI")
+                    tvBio.text = it.getStringExtra("EXTRA_BIO")
+                }
             }
         }
 
@@ -29,31 +28,36 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val closeProfile = findViewById<View>(R.id.closeProfile)
-        val btnEdit = findViewById<View>(R.id.btnEdit)
+        tvNama = findViewById(R.id.tvNama)
+        tvLokasi = findViewById(R.id.tvLokasi)
+        tvBio = findViewById(R.id.tvBio)
 
-        closeProfile.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+        findViewById<View>(R.id.closeProfile).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
 
-        btnEdit.setOnClickListener {
+        findViewById<View>(R.id.btnEdit).setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)
-
-            intent.putExtra(
-                "EXTRA_NAMA",
-                findViewById<TextView>(R.id.tvNama).text.toString()
-            )
-            intent.putExtra(
-                "EXTRA_LOKASI",
-                findViewById<TextView>(R.id.tvLokasi).text.toString()
-            )
-            intent.putExtra(
-                "EXTRA_BIO",
-                findViewById<TextView>(R.id.tvBio).text.toString()
-            )
-
+            intent.putExtra("EXTRA_NAMA", tvNama.text.toString())
+            intent.putExtra("EXTRA_LOKASI", tvLokasi.text.toString())
+            intent.putExtra("EXTRA_BIO", tvBio.text.toString())
             editProfileLauncher.launch(intent)
+        }
+
+        findViewById<View>(R.id.btnHome).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }
+
+        findViewById<View>(R.id.btnMaps).setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+            finish()
+        }
+
+        findViewById<View>(R.id.btnProgress).setOnClickListener {
+            startActivity(Intent(this, ProgressActivity::class.java))
+            finish()
         }
     }
 }

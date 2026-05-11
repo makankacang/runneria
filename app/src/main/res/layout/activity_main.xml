@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="48dp"
@@ -80,6 +81,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:00"

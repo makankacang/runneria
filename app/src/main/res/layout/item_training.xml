@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Workout"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00 : 15 : 00"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#A80038"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnStartTraining"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Start Training"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#A80038"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

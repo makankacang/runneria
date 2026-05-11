@@ -12,7 +12,15 @@
     <org.osmdroid.views.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="#777777" />
+    </org.osmdroid.views.MapView>
 
     <LinearLayout
         android:id="@+id/spinnerOverlay"
@@ -39,15 +47,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
         android:layout_margin="19dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/bg_panel"
         android:orientation="horizontal"
         android:padding="10dp"
         android:paddingTop="20dp">
 
         <EditText
+            android:id="@+id/etSearch"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -62,10 +69,11 @@
             android:layout_height="48dp"
             android:gravity="center"
             android:paddingHorizontal="16dp"
-            android:text="Run ▼"
+            android:text="Search"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,6 +84,7 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/btnStart"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -88,12 +97,14 @@
             android:layout_height="1dp"/>
 
         <Button
+            android:id="@+id/btnTraining"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:text="Training"
             android:textColor="@android:color/white"
             android:backgroundTint="#A80038"/>
+
 
     </LinearLayout>
 
@@ -147,13 +158,6 @@
         app:behavior_hideable="false"
         app:behavior_peekHeight="230dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-        <View
-            android:layout_width="48dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
-            android:background="#777777" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -262,6 +266,7 @@
             android:textColor="#AAAAAA" />
 
         <Button
+            android:id="@+id/btnDetailActivity"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:backgroundTint="#A80038"
@@ -452,28 +457,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/btnActivities"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_activity"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Activities"
-                android:textSize="10sp"/>
-
-        </LinearLayout>
 
 
         <LinearLayout
@@ -517,8 +500,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profile"
-                android:textSize="10sp"/>
+                android:text="You"
+                android:textSize="10sp" />
 
         </LinearLayout>
 
